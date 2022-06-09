@@ -1,32 +1,35 @@
-import Model, {baseUrl, filePost,  ModelObject} from "./api";
-import {getAuth} from "./authUtils";
+import Model, {baseUrl, ModelData,  ModelObject} from "./api";
 
 
-export class ExampleObject extends ModelObject 
+export class HospitalObject extends ModelObject
 {
+    id=0;
+    name="";
+    location="";
+    phone_number1="";
+    phone_number2="";
+    hospital_photo="";
 
-    constructor(data: any, baseUrl: string)
+
+
+    constructor(data: ModelData, baseUrl: string)
     {
 
+
+
         super(data, baseUrl);
-        this.fields = ["id"];
+        this.fields = ["id", "name", "location", "phone_number1", "phone_number2", "hospital_photo"];
         this.getData();
 
     }
 
-    async addPhoto(file: File)
-    {
-        const formData = new FormData();
 
-        formData.append("image", file, file.name);
-        formData.append("id", this.id.toString());
-        const headers = {"Authorization": `Bearer ${getAuth()}`};
-
-        return await filePost(baseUrl + "/api/image/", formData, headers);
-    }
 }
 
-export const Example = new Model(baseUrl + "/api/marker/", ExampleObject);
 
-export type ModelRegistry = typeof ExampleObject;
+
+
+export const Hospital = new Model(baseUrl + "/api/hospital/", HospitalObject);
+
+export type ModelRegistry = typeof HospitalObject;
 
