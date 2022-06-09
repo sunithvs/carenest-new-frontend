@@ -10,7 +10,8 @@ import {useNavigate} from "react-router-dom";
 
 const bottoms_links = ["/", "/search", "/appointments", "/profile"];
 
-export default function SimpleBottomNavigation() {
+export default function SimpleBottomNavigation() 
+{
     const [value, setValue] = React.useState(0);
     const navigate = useNavigate();
 
@@ -19,7 +20,8 @@ export default function SimpleBottomNavigation() {
             <BottomNavigation
                 showLabels
                 value={value}
-                onChange={(event, newValue) => {
+                onChange={(event, newValue) => 
+                {
                     setValue(newValue);
                     navigate(bottoms_links[newValue]);
                 }}

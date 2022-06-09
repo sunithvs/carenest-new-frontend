@@ -2,8 +2,9 @@ import * as React from "react";
 import Box from "@mui/material/Box";
 import TextField from "@mui/material/TextField";
 
-interface SearchProps{
+interface SearchProps {
     label: string;
+    set_search?: any;
 }
 export default function Searchme(props:SearchProps) 
 {
@@ -16,7 +17,8 @@ export default function Searchme(props:SearchProps)
             noValidate
             autoComplete="off"
         >
-            <TextField id="outlined-basic" label={props.label} variant="outlined" />
+            <TextField id="outlined-basic" label={props.label} variant="outlined" onChange={(e)=>{
+                props.set_search(e.target.value)}}/>
 
         </Box>
     );
