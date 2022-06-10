@@ -16,7 +16,7 @@ export default function SimpleBottomNavigation()
     const navigate = useNavigate();
 
     return (
-        <Box sx={{position: "fixed", bottom: 0, left: 0, right: 0}}>
+        <Box sx={{position: "fixed", bottom: 0, left: 0, right: 0,zIndex:1500}}>
             <BottomNavigation
                 showLabels
                 value={value}
