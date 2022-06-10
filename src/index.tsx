@@ -13,6 +13,7 @@ import {Pharmacy1} from "./pages/Pharmacy/Pharmacy1";
 import {Pharmacy2} from "./pages/Pharmacy/Pharmacy2";
 import {Medicalhistory} from "./pages/MedicalHistory/Medicalhistory";
 import {Findhomenurse} from "./pages/FindHomeNurse/Findhomenurse";
+
 import {FindHospitals} from "./pages/Findhospitals/FindHospitals";
 
 const wb = new Workbox("/sw.js");
@@ -28,6 +29,7 @@ function App()
             <HandleAppState wb={wb}/>
             <BrowserRouter>
                 <Routes>
+
 
                     <Route path="/search" element={<div><BottomNav/><FindHospitals/></div>}/>
                     <Route path="/appointments" element={<div><BottomNav/><Appointments/></div>}/>
