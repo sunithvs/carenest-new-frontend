@@ -82,7 +82,7 @@ module.exports = (env) => ({
     plugins: [
         new HtmlWebpackPlugin({
             template: path.resolve(__dirname, "..", "public/index.html"),
-            title: "Need Medi",
+            title: "Carenest",
             favicon: path.resolve(__dirname, "..", "public/favicon.ico"),
         }),
         new HtmlWebpackPlugin({
@@ -92,8 +92,8 @@ module.exports = (env) => ({
             inject: false
         }),
         new WebpackPwaManifest({
-            name: "Need Medi",
-            short_name: "Need Medi",
+            name: "Carenest",
+            short_name: "Carenest",
             description: "Facebook for doctors.",
             background_color: "#FFFFFF",
             orientation: "any",
