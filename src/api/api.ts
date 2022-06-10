@@ -109,6 +109,11 @@ export async function patch(url: RequestInfo, kwargs = {}, headers = {})
         return response.json();
     }
 }
+export interface ModelData
+{
+    [key: string]: number | string,
+}
+
 
 
 export class ModelObject
@@ -204,7 +209,7 @@ export default class Model
 
 
             const data = await get(`${this.baseurl}`, kwargs, headers);
-            const lst = data.results.map((item: unknown) => new this.modelClass(item, this.baseurl));
+            const lst = data.results.map((item: ModelData) => new this.modelClass(item, this.baseurl));
             return {results: lst, next: data.next};
         }
         catch (e)
@@ -223,7 +228,7 @@ export default class Model
                 headers = {"Authorization": `Bearer ${getAuth()}`};
 
             const data = await get(`${this.baseurl}${path}`, kwargs, headers);
-            const lst = data.results.map((item: unknown) => new this.modelClass(item, this.baseurl));
+            const lst = data.results.map((item: ModelData) => new this.modelClass(item, this.baseurl));
 
             return {results: lst, next: data.next};
         }
