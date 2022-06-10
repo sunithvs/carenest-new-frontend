@@ -3,9 +3,7 @@ import {styled} from "@mui/material/styles";
 import Box from "@mui/material/Box";
 import Paper from "@mui/material/Paper";
 import Grid from "@mui/material/Grid";
-// eslint-disable-next-line import/no-unresolved
-import ph1 from "/public/images/ph1.png";
-// eslint-disable-next-line import/no-unresolved
+
 import hosp1 from "/public/images/hosp1.png";
 
 import {useNavigate} from "react-router-dom";

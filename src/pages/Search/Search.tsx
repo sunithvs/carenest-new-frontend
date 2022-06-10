@@ -21,11 +21,11 @@ export const Search = () =>
 
             <BasicTextFields label={"Search Doctors"}/>
             <br/>
-            <Manythingscard name={"Dr.Jessy"} button={"Make an appointment"} details={"Pediatrician"} img="d1" />
+            <Manythingscard name={"Dr.Jessy"} button={"Make an appointment"} details={"Pediatrician"} img={"d1"} />
             <br/>
-            <Manythingscard name={"Dr.Lissy"} button={"Make an appointment"} details={"Gynacologist"} img="d2" />
+            <Manythingscard name={"Dr.Lissy"} button={"Make an appointment"} details={"Gynacologist"} img={"d2"} />
             <br/>
-            <Manythingscard name={"Dr.Nimmy"} button={"Make an appointment"} details={"Dentist"} img="d3" />
+            <Manythingscard name={"Dr.Nimmy"} button={"Make an appointment"} details={"Dentist"} img={"d3"} />
             <br/>
         </>
     );
