@@ -1,5 +1,3 @@
-// import "./bootstrap.css";
-
 import ReactDOM from "react-dom";
 import {Workbox} from "workbox-window";
 import {BrowserRouter, Route, Routes} from "react-router-dom";
