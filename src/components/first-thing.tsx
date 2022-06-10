@@ -5,6 +5,9 @@ import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 import {Button, CardActionArea, CardActions} from "@mui/material";
 
+// eslint-disable-next-line import/no-unresolved
+import chatbot from "/public/images/chatbot.png";
+
 export default function MultiActionAreaCard() 
 {
     return (
@@ -13,7 +16,7 @@ export default function MultiActionAreaCard()
                 <CardMedia
                     component="img"
                     height="200"
-                    image="/public/images/chatbots.png"
+                    image={chatbot}
                     alt="chatbot"
                 />
                 <CardContent>

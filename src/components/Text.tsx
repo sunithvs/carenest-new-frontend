@@ -11,6 +11,7 @@ import MoreIcon from "@mui/icons-material/MoreVert";
 
 import Fab from "@mui/material/Fab";
 import ArrowBackRoundedIcon from "@mui/icons-material/ArrowBackRounded";
+import {useNavigate} from "react-router-dom";
 
 const StyledToolbar = styled(Toolbar)(({ theme }) => ({
     alignItems: "flex-start",
@@ -27,13 +28,14 @@ interface ProminentAppBarProps {
 }
 export default function ProminentAppBar(props: ProminentAppBarProps) 
 {
+    const navigate = useNavigate();
     return (
         <Box sx={{ flexGrow: 1 }}>
             <AppBar position="static">
                 <StyledToolbar>
                     <Box sx={{ "& > :not(style)": { m: 1 } }}>
                         <Fab size="small">
-                            <ArrowBackRoundedIcon/>
+                            <ArrowBackRoundedIcon onClick={() => navigate("/")}/>
                         </Fab>
                     </Box>
                     <Typography
