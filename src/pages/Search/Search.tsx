@@ -1,4 +1,4 @@
-import BasicTextFields from "../../components/search";
+// import BasicTextFields from "../../components/search";
 
 import ProminentAppBar from "../../components/Text";
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
@@ -19,7 +19,7 @@ export const Search = () =>
 
             <ProminentAppBar name={"Doctor Search"}/>
 
-            <BasicTextFields label={"Search Doctors"}/>
+            {/*<BasicTextFields label={"Search Doctors"}/>*/}
             <br/>
             <Manythingscard name={"Dr.Jessy"} button={"Make an appointment"} details={"Pediatrician"} img={"d1"} />
             <br/>
